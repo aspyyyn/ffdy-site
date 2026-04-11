@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos | Foundation for Disabled Youths</title>
+  <meta name="description" content="Browse FFDY's photo archives from 2011 to present — moments of joy, growth, and community." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.92);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: var(--radius);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: #fff;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+      opacity: .7;
+      transition: opacity .2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .gallery-item { cursor: pointer; }
+
+    /* Placeholder tiles */
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      background: var(--bg-light);
+      color: var(--text-muted);
+      font-size: .8rem;
+    }
+    .photo-placeholder span { font-size: 2rem; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/logo.png" alt="FFDY Logo" />
+      <div class="nav-brand-text">
+        <strong>Foundation for</strong>
+        <span>Disabled Youths</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="for-parents.html">For Parents</a></li>
+      <li><a href="photos.html" class="active">Photos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+      <a href="donate.html" class="btn btn-primary btn-sm">Donate</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="programs.html">Programs</a>
+  <a href="donate.html">Donate</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="for-parents.html">For Parents</a>
+  <a href="photos.html">Photos</a>
+  <a href="contact.html">Contact</a>
+  <div class="lang-row">
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Photos</span>
+    </div>
+    <div class="section-label">Memories</div>
+    <h1>Our Photo Gallery</h1>
+    <p>A glimpse into the joy, friendship, and milestones of the FFDY community — year by year.</p>
+  </div>
+</div>
+
+<!-- ===== GALLERY ===== -->
+<section>
+  <div class="container">
+
+    <!-- Year Tabs -->
+    <div class="year-tabs" role="tablist" aria-label="Photo gallery years">
+      <button class="year-tab active" data-year="2024" role="tab">2024</button>
+      <button class="year-tab" data-year="2023" role="tab">2023</button>
+      <button class="year-tab" data-year="2022" role="tab">2022</button>
+      <button class="year-tab" data-year="2021" role="tab">2021</button>
+      <button class="year-tab" data-year="2020" role="tab">2020</button>
+      <button class="year-tab" data-year="2019" role="tab">2019</button>
+      <button class="year-tab" data-year="2018" role="tab">2018</button>
+      <button class="year-tab" data-year="2017" role="tab">2017</button>
+      <button class="year-tab" data-year="2016" role="tab">2016</button>
+      <button class="year-tab" data-year="2015" role="tab">2015</button>
+      <button class="year-tab" data-year="2014" role="tab">2014</button>
+      <button class="year-tab" data-year="2013" role="tab">2013</button>
+      <button class="year-tab" data-year="2012" role="tab">2012</button>
+      <button class="year-tab" data-year="2011" role="tab">2011</button>
+    </div>
+
+    <!-- Note about photos -->
+    <div style="background:var(--accent-light); border:1px solid #FDDFA0; border-radius:var(--radius); padding:1rem 1.5rem; margin-bottom:2rem; font-size:.875rem; color:var(--text-muted);">
+      <strong style="color:var(--text);">Photo Gallery:</strong> Upload your photos to this gallery by adding images to the <code>photos/[year]/</code> directory. See the original archive at <a href="https://ffdy.org" target="_blank" style="color:var(--primary);">ffdy.org</a> for reference.
+    </div>
+
+    <!-- Gallery grids by year -->
+    <div class="photo-gallery">
+
+      <!-- 2024 -->
+      <div class="gallery-year active" data-year="2024">
+        <!-- Photos are loaded from your photos/2024/ directory -->
+        <!-- Add <img> tags here as: <div class="gallery-item"><img src="photos/2024/photo1.jpg" alt="..." /></div> -->
+        <div class="gallery-item">
+          <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/pexels-leeloothefirst-4910567_1.jpg" alt="FFDY 2024 event" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="gallery-year" data-year="2023">
+        <div class="gallery-item">
+          <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/pexels-leeloothefirst-4910567_1.jpg" alt="FFDY 2023 event" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="gallery-year" data-year="2022">
+        <div class="gallery-item">
+          <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/pexels-leeloothefirst-4910567_1.jpg" alt="FFDY 2022 event" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-placeholder"><span>📸</span>Photo coming soon</div>
+        </div>
+      </div>
+
+      <!-- 2021 - 2011: placeholder years -->
+      <div class="gallery-year" data-year="2021">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2021 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2020">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2020 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2019">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2019 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2018">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2018 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2017">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2017 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2016">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2016 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2015">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2015 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2014">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2014 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2013">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2013 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2012">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2012 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+      <div class="gallery-year" data-year="2011">
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>2011 photos coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+        <div class="gallery-item"><div class="photo-placeholder"><span>📸</span>Photo coming soon</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="" alt="" id="lightbox-img" />
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/logo.png" alt="FFDY" />
+        <p>Foundation for Disabled Youths is a grassroots nonprofit dedicated to empowering individuals with intellectual and developmental disabilities in Southern California since 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Organization</h5>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Programs</a>
+        <a href="photos.html">Photos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="donate.html">Donate</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="for-parents.html">For Parents</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:6269682169">(626) 968-2169</a>
+        <a href="mailto:ffdy2004@yahoo.com">ffdy2004@yahoo.com</a>
+        <a href="#">P.O. Box 5025<br />Hacienda Heights, CA 91745</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Foundation for Disabled Youths. All rights reserved. 501(c)(3) Nonprofit.</span>
+      <div class="social-links">
+        <a href="https://www.facebook.com/ffdy" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="https://twitter.com/FFDYCares" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">𝕏</a>
+        <a href="https://www.instagram.com/ffdycares" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">&#9737;</a>
+        <a href="https://www.youtube.com/user/FFDYorg" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  document.querySelector('.lightbox-close').addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+</body>
+</html>

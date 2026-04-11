@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Foundation for Disabled Youths</title>
+  <meta name="description" content="Support FFDY's programs for the I/DD community through a monetary or in-kind donation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/logo.png" alt="FFDY Logo" />
+      <div class="nav-brand-text">
+        <strong>Foundation for</strong>
+        <span>Disabled Youths</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="donate.html" class="active">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="for-parents.html">For Parents</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+      <a href="donate.html" class="btn btn-primary btn-sm">Donate</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="programs.html">Programs</a>
+  <a href="donate.html">Donate</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="for-parents.html">For Parents</a>
+  <a href="photos.html">Photos</a>
+  <a href="contact.html">Contact</a>
+  <div class="lang-row">
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Donate</span>
+    </div>
+    <div class="section-label">Give Today</div>
+    <h1>Support Our Community</h1>
+    <p>Every dollar you give goes directly toward programs, events, and resources that help individuals with I/DD thrive.</p>
+  </div>
+</div>
+
+<!-- ===== DONATE ===== -->
+<section>
+  <div class="container">
+    <div style="display:grid; grid-template-columns: 3fr 2fr; gap: 4rem; align-items:start;">
+
+      <!-- Donation form / options -->
+      <div class="fade-up">
+        <h2 style="margin-bottom:.5rem;">Make a Donation</h2>
+        <p style="margin-bottom:2rem;">FFDY is a 501(c)(3) nonprofit organization. All donations are tax-deductible to the fullest extent permitted by law.</p>
+
+        <div class="donate-options">
+          <div class="donate-option-card selected">
+            <div class="amount">$25</div>
+            <p>Covers one week of art supplies for a class session</p>
+          </div>
+          <div class="donate-option-card">
+            <div class="amount">$50</div>
+            <p>Sponsors a birthday celebration for one of our members</p>
+          </div>
+          <div class="donate-option-card">
+            <div class="amount">$100</div>
+            <p>Funds a month of weekly programming for one participant</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom:2rem;">
+          <label for="custom-amount" style="display:block; font-weight:600; margin-bottom:.5rem;">Or enter a custom amount:</label>
+          <div style="display:flex; gap:.75rem; align-items:center;">
+            <div style="position:relative; flex:1;">
+              <span style="position:absolute; left:.9rem; top:50%; transform:translateY(-50%); color:var(--text-muted); font-weight:600;">$</span>
+              <input type="number" id="custom-amount" min="1" placeholder="Other amount" style="width:100%; padding:.75rem 1rem .75rem 2rem; border:1px solid var(--border); border-radius:var(--radius); font-size:1rem; font-family:inherit;" />
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-light); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; margin-bottom:2rem;">
+          <h3 style="margin-bottom:1rem;">How to Send Your Donation</h3>
+          <p style="margin-bottom:1rem;">At this time, we accept donations by <strong>check payable to:</strong></p>
+          <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; font-family:monospace; font-size:.95rem; color:var(--text);">
+            Foundation For Disabled Youths<br />
+            P.O. Box 5025<br />
+            Hacienda Heights, CA 91745
+          </div>
+          <p style="margin-top:1rem; font-size:.875rem;">Please include your name and email address with your check so we can acknowledge your generous gift.</p>
+        </div>
+
+        <div style="background:var(--accent-light); border:1px solid #FDDFA0; border-radius:var(--radius-lg); padding:1.5rem;">
+          <h4 style="margin-bottom:.5rem;">In-Kind Donations</h4>
+          <p style="font-size:.9rem;">We also gladly accept donations of supplies, equipment, food, and other materials. To arrange an in-kind donation, please contact:</p>
+          <ul style="margin-top:.75rem; list-style:none; display:flex; flex-direction:column; gap:.4rem;">
+            <li style="font-size:.9rem;"><strong>Wendy:</strong> <a href="tel:6268643632" style="color:var(--primary);">(626) 864-3632</a></li>
+            <li style="font-size:.9rem;"><strong>Jane:</strong> <a href="tel:6262426956" style="color:var(--primary);">(626) 242-6956</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Impact sidebar -->
+      <div class="fade-up">
+        <div class="card" style="position:sticky; top:calc(var(--nav-height) + 2rem);">
+          <div class="section-label">Your Impact</div>
+          <h3 style="margin-bottom:1.5rem;">Where Your Gift Goes</h3>
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.4rem;">
+                <span style="font-size:.875rem; font-weight:600;">Programs &amp; Classes</span>
+                <span style="font-size:.875rem; font-weight:700; color:var(--primary);">65%</span>
+              </div>
+              <div style="height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:65%; background:var(--primary); border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.4rem;">
+                <span style="font-size:.875rem; font-weight:600;">Events &amp; Outings</span>
+                <span style="font-size:.875rem; font-weight:700; color:var(--accent-dark);">20%</span>
+              </div>
+              <div style="height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:20%; background:var(--accent); border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.4rem;">
+                <span style="font-size:.875rem; font-weight:600;">Parent &amp; Family Resources</span>
+                <span style="font-size:.875rem; font-weight:700; color:var(--text-muted);">10%</span>
+              </div>
+              <div style="height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:10%; background:var(--text-muted); border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.4rem;">
+                <span style="font-size:.875rem; font-weight:600;">Operations</span>
+                <span style="font-size:.875rem; font-weight:700; color:var(--text-muted);">5%</span>
+              </div>
+              <div style="height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:5%; background:var(--text-muted); border-radius:4px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border);">
+            <div class="stat-number" style="font-size:1.5rem; color:var(--primary); display:block; margin-bottom:.25rem;">50+ Families</div>
+            <p style="font-size:.875rem;">rely on FFDY programs each year</p>
+          </div>
+          <div style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid var(--border);">
+            <p style="font-size:.8rem; color:var(--text-muted);">FFDY is a registered 501(c)(3) nonprofit. EIN available upon request. Donations are tax-deductible.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOLUNTEER CTA ===== -->
+<div class="callout">
+  <div class="container">
+    <h2>Can't Donate? You Can Still Help.</h2>
+    <p>Your time is just as valuable as a financial gift. Become a volunteer and make a direct difference in the lives of our members every week.</p>
+    <a href="volunteer.html" class="btn btn-primary">Volunteer With Us</a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/logo.png" alt="FFDY" />
+        <p>Foundation for Disabled Youths is a grassroots nonprofit dedicated to empowering individuals with intellectual and developmental disabilities in Southern California since 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Organization</h5>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Programs</a>
+        <a href="photos.html">Photos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="donate.html">Donate</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="for-parents.html">For Parents</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:6269682169">(626) 968-2169</a>
+        <a href="mailto:ffdy2004@yahoo.com">ffdy2004@yahoo.com</a>
+        <a href="#">P.O. Box 5025<br />Hacienda Heights, CA 91745</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Foundation for Disabled Youths. All rights reserved. 501(c)(3) Nonprofit.</span>
+      <div class="social-links">
+        <a href="https://www.facebook.com/ffdy" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="https://twitter.com/FFDYCares" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">𝕏</a>
+        <a href="https://www.instagram.com/ffdycares" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">&#9737;</a>
+        <a href="https://www.youtube.com/user/FFDYorg" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

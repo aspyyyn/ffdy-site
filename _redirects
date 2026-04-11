@@ -1,0 +1,4 @@
+# Cloudflare Pages redirect rules
+# Redirect old ffdy.org-style paths if needed
+/about-us   /about.html   301
+/contact-us /contact.html 301
