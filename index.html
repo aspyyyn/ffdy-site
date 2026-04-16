@@ -25,7 +25,14 @@
 
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li class="nav-dropdown">
+              <span>About Us &#8964;</span>
+              <div class="nav-dropdown-menu">
+                <a href="about.html">About Us</a>
+                <a href="board-of-directors.html">Board of Directors</a>
+                <a href="certificates.html">Certificates</a>
+              </div>
+            </li>
       <li><a href="programs.html">Programs</a></li>
       <li><a href="donate.html">Donate</a></li>
       <li><a href="volunteer.html">Volunteer</a></li>
@@ -52,6 +59,8 @@
 <div class="nav-mobile" aria-hidden="true">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
+  <a href="board-of-directors.html" style="padding-left:2rem; font-size:.875rem; color:var(--text-muted);">Board of Directors</a>
+  <a href="certificates.html" style="padding-left:2rem; font-size:.875rem; color:var(--text-muted);">Certificates</a>
   <a href="programs.html">Programs</a>
   <a href="donate.html">Donate</a>
   <a href="volunteer.html">Volunteer</a>
@@ -66,7 +75,7 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero" aria-label="Hero">
-  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-bg" aria-hidden="true" style="background-image: url('images/hero.jpg'), url('https://ffdy.org/uploads/1/4/9/5/149537551/published/pexels-leeloothefirst-4910567_1.jpg');"></div>
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">&#127775; Serving Southern California since 2004</div>
@@ -111,8 +120,8 @@
     <div class="mission-grid">
       <div class="mission-image fade-up">
         <img
-          src="https://ffdy.org/uploads/1/4/9/5/149537551/published/pexels-leeloothefirst-4910567_1.jpg"
-          alt="FFDY community members enjoying activities together"
+          src="images/mission.jpg"
+          alt="FFDY community at The Huntington"
           loading="lazy"
         />
       </div>

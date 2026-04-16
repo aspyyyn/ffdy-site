@@ -289,10 +289,9 @@ section { padding: 5rem 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://ffdy.org/uploads/1/4/9/5/149537551/published/pexels-leeloothefirst-4910567_1.jpg');
   background-size: cover;
-  background-position: center 30%;
-  opacity: .32;
+  background-position: center 40%;
+  opacity: .38;
 }
 .hero-content {
   position: relative;

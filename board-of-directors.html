@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Board of Directors | Foundation for Disabled Youths</title>
+  <meta name="description" content="Meet the Board of Directors of the Foundation for Disabled Youths." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .board-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .board-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .board-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: top;
+      background: var(--bg-light);
+    }
+    .board-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .board-info { padding: 1.5rem; }
+    .board-info h3 { font-size: 1.1rem; margin-bottom: .25rem; }
+    .board-title {
+      display: inline-block;
+      padding: .3rem .9rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: var(--radius-pill);
+      font-size: .8rem;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) { .board-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .board-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/logo.png" alt="FFDY Logo" />
+      <div class="nav-brand-text">
+        <strong>Foundation for</strong>
+        <span>Disabled Youths</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <span style="color:var(--primary);">About Us &#8964;</span>
+        <div class="nav-dropdown-menu">
+          <a href="about.html">About Us</a>
+          <a href="board-of-directors.html">Board of Directors</a>
+          <a href="certificates.html">Certificates</a>
+        </div>
+      </li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="for-parents.html">For Parents</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+      <a href="donate.html" class="btn btn-primary btn-sm">Donate</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="board-of-directors.html" style="padding-left:2rem; font-size:.875rem; color:var(--text-muted);">Board of Directors</a>
+  <a href="certificates.html" style="padding-left:2rem; font-size:.875rem; color:var(--text-muted);">Certificates</a>
+  <a href="programs.html">Programs</a>
+  <a href="donate.html">Donate</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="for-parents.html">For Parents</a>
+  <a href="photos.html">Photos</a>
+  <a href="contact.html">Contact</a>
+  <div class="lang-row">
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <a href="about.html">About Us</a><span>/</span>
+      <span>Board of Directors</span>
+    </div>
+    <div class="section-label">Leadership</div>
+    <h1>Board of Directors</h1>
+    <p>Meet the dedicated volunteers who guide and govern the Foundation for Disabled Youths.</p>
+  </div>
+</div>
+
+<!-- ===== BOARD ===== -->
+<section>
+  <div class="container">
+    <div class="board-grid">
+
+      <!-- Mark Chang -->
+      <div class="board-card fade-up">
+        <img
+          class="board-photo"
+          src="https://ffdy.org/uploads/1/4/9/5/149537551/mark1.jpg"
+          alt="Mark Chang"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="board-photo-placeholder" style="display:none;">👤</div>
+        <div class="board-info">
+          <h3>Mark Chang</h3>
+          <span class="board-title">President</span>
+        </div>
+      </div>
+
+      <!-- James Weng -->
+      <div class="board-card fade-up">
+        <img
+          class="board-photo"
+          src="https://ffdy.org/uploads/1/4/9/5/149537551/member-james-weng.jpg"
+          alt="James Weng"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="board-photo-placeholder" style="display:none;">👤</div>
+        <div class="board-info">
+          <h3>James Weng</h3>
+          <span class="board-title">Vice President</span>
+        </div>
+      </div>
+
+      <!-- Wendy Lai -->
+      <div class="board-card fade-up">
+        <img
+          class="board-photo"
+          src="https://ffdy.org/uploads/1/4/9/5/149537551/member-wendy-liao-600.jpg"
+          alt="Wendy Lai"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="board-photo-placeholder" style="display:none;">👤</div>
+        <div class="board-info">
+          <h3>Wendy Lai</h3>
+          <span class="board-title">Executive Director</span>
+        </div>
+      </div>
+
+      <!-- Jane Wu -->
+      <div class="board-card fade-up">
+        <img
+          class="board-photo"
+          src="https://ffdy.org/uploads/1/4/9/5/149537551/jane.jpg"
+          alt="Jane Wu"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="board-photo-placeholder" style="display:none;">👤</div>
+        <div class="board-info">
+          <h3>Jane Wu</h3>
+          <span class="board-title">Secretary / Treasurer</span>
+        </div>
+      </div>
+
+      <!-- Yoyo Yang -->
+      <div class="board-card fade-up">
+        <img
+          class="board-photo"
+          src="https://ffdy.org/uploads/1/4/9/5/149537551/member-yoyo-yang.jpg"
+          alt="Yoyo Yang"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="board-photo-placeholder" style="display:none;">👤</div>
+        <div class="board-info">
+          <h3>Yoyo Yang</h3>
+          <span class="board-title">Board Member</span>
+        </div>
+      </div>
+
+      <!-- Lulu Shen -->
+      <div class="board-card fade-up">
+        <img
+          class="board-photo"
+          src="https://ffdy.org/uploads/1/4/9/5/149537551/lulu-copy.jpg"
+          alt="Lulu Shen"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="board-photo-placeholder" style="display:none;">👤</div>
+        <div class="board-info">
+          <h3>Lulu Shen</h3>
+          <span class="board-title">Board Member</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<div class="callout">
+  <div class="container">
+    <h2>Want to Make a Difference?</h2>
+    <p>Support the work of our board by volunteering your time or making a donation to fund our programs.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="donate.html" class="btn btn-primary">Donate</a>
+      <a href="volunteer.html" class="btn btn-outline">Volunteer</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://ffdy.org/uploads/1/4/9/5/149537551/published/logo.png" alt="FFDY" />
+        <p>Foundation for Disabled Youths is a grassroots nonprofit dedicated to empowering individuals with intellectual and developmental disabilities in Southern California since 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Organization</h5>
+        <a href="about.html">About Us</a>
+        <a href="board-of-directors.html">Board of Directors</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="programs.html">Programs</a>
+        <a href="photos.html">Photos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="donate.html">Donate</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="for-parents.html">For Parents</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:6269682169">(626) 968-2169</a>
+        <a href="mailto:ffdy2004@yahoo.com">ffdy2004@yahoo.com</a>
+        <a href="#">P.O. Box 5025<br />Hacienda Heights, CA 91745</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Foundation for Disabled Youths. All rights reserved. 501(c)(3) Nonprofit.</span>
+      <div class="social-links">
+        <a href="https://www.facebook.com/ffdy" class="social-link" target="_blank" rel="noopener">f</a>
+        <a href="https://twitter.com/FFDYCares" class="social-link" target="_blank" rel="noopener">𝕏</a>
+        <a href="https://www.instagram.com/ffdycares" class="social-link" target="_blank" rel="noopener">&#9737;</a>
+        <a href="https://www.youtube.com/user/FFDYorg" class="social-link" target="_blank" rel="noopener">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
