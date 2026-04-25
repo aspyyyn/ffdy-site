@@ -166,7 +166,7 @@ section { padding: 5rem 0; }
   padding: .5rem;
   z-index: 200;
 }
-.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown.open .nav-dropdown-menu { display: block; }
 .nav-dropdown-menu a {
   display: block;
   padding: .55rem .9rem;

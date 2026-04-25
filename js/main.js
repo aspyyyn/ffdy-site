@@ -10,6 +10,17 @@ if (nav) {
   }, { passive: true });
 }
 
+// ----- Dropdown click-to-open ---------------------------
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  dropdown.querySelector('span').addEventListener('click', e => {
+    const isOpen = dropdown.classList.toggle('open');
+    e.stopPropagation();
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+});
+
 // ----- Hamburger / mobile nav ---------------------------
 const hamburger = document.querySelector('.nav-hamburger');
 const mobileNav = document.querySelector('.nav-mobile');
